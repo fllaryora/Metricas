@@ -25,6 +25,7 @@
 #include "printer.h"
 #include "genericNode.h"
 #include "jsonHelper.h"
+#include <stdint.h>
 
 //benchmark code
 #define USED_CLOCK CLOCK_MONOTONIC // CLOCK_MONOTONIC_RAW if available

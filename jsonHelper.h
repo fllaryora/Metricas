@@ -12,6 +12,14 @@
 #define PROB_MIN 0.999
 #define PROB_MAX 1.001
 
+
+#ifndef FALSE
+#define FALSE (0)
+#endif
+#ifndef TRUE
+#define TRUE (!FALSE)
+#endif
+
 typedef struct{
 	int isValid;
 	int seed;
@@ -49,6 +57,7 @@ typedef enum{
 /*  //Funcion principal
 Valida El archivo de ingreso contra el schema y  luego al archivo contra las reglas misma del modelo precursor */
 extern ValidationResults* validateJsonInput( const char* filenameJson );
+extern ValidationResults*  validateJson(const char *filenameJson);
 /**	Escribe el porque fracazo la validacion del json */
 extern void writeErrorInFile(const char* label);
 
