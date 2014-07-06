@@ -1,0 +1,49 @@
+{
+ "length": 100,
+ "seed": -1,
+ "transformation": {
+                "queues": [
+                        {
+                                "idNode": 1,
+                                "resource": 1,
+                                "preceders": [2],
+                                "followers": [2],
+                                "fixedCost": 0.0,
+                                "variableCost": 0.0
+                        }
+                ],
+                "counters": [
+                        {
+                                "idNode": 4,
+                                "quantity": 1,
+                                "cycle": 200,
+                                "preceders":[3],
+                                "followers": []
+                                
+                        }
+                ],
+                "normals": [
+                        {
+                                "idNode": 3,
+                                "preceders":[2],
+                                "followers": [4],
+                                "delay" : {
+                                        "distribution": "deterministic",
+                                        "constant" : 0
+                                }
+                        }
+                ],
+                "functions": [ ],
+                "combis": [
+                        {
+                                "idNode": 2,
+                                "preceders":[1],
+                                "followers": [1,3],
+                                "delay" : {
+                                        "distribution": "deterministic",
+                                        "constant" : 5
+                                }
+                        }
+                ]
+        }
+}

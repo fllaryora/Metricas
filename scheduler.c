@@ -79,11 +79,11 @@ void scheduler(unsigned long watchdog, const MPI_Comm commNodes , CycleValidator
 			}
 		}
 		
-	printf("-- FIN DELTA T --\n");
+	//printf("-- FIN DELTA T --\n");
 	totalTime += TIME_ONE_STEP;
 	} while( watchdog > 0 && (isAllFinalized!=counterNodes));
 	//envio livelock al resto de los nodos
-	printf("SALIOOO del Watchdog\n");
+	//printf("SALIOOO del Watchdog\n");
 	msg = LIVE_LOCK;
 	MPI_Bcast( &msg ,1,MPI_INT, MASTER_ID, commNodes);
 	MPI_Send( NULL , 0 , MPI_INT , RAFFLER_ID , LIVE_LOCK , MPI_COMM_WORLD);
